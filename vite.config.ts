@@ -1,13 +1,28 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import unocss from "unocss/vite";
+import Components from "unplugin-vue-components/vite";
+import { PrimeVueResolver } from "@primevue/auto-import-resolver";
+import AutoImport from "unplugin-auto-import/vite";
 
 // @ts-expect-error process is a nodejs global
 const host = process.env.TAURI_DEV_HOST;
 
 // https://vitejs.dev/config/
 export default defineConfig(async () => ({
-  plugins: [unocss(), vue()],
+  plugins: [
+    AutoImport({ imports: ["vue"] }),
+    Components({
+      dirs: ["src/components"],
+      extensions: ["vue"],
+      deep: true,
+      dts: true,
+      directoryAsNamespace: false,
+      resolvers: [PrimeVueResolver()],
+    }),
+    unocss(),
+    vue(),
+  ],
 
   // Vite options tailored for Tauri development and only applied in `tauri dev` or `tauri build`
   //
