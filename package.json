@@ -4,31 +4,27 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview",
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "preview": "nuxi preview",
     "tauri": "tauri"
   },
   "dependencies": {
-    "@primevue/auto-import-resolver": "^4.0.5",
-    "@primevue/themes": "^4.0.5",
-    "@tauri-apps/api": ">=2.0.0-rc.0",
-    "@tauri-apps/plugin-shell": ">=2.0.0-rc.0",
-    "@unocss/reset": "^0.62.3",
-    "@vueuse/core": "^11.0.3",
-    "lucide-vue-next": "^0.439.0",
-    "primeicons": "^7.0.0",
-    "primevue": "^4.0.5",
-    "unocss": "^0.62.3",
-    "unplugin-auto-import": "^0.18.2",
-    "unplugin-vue-components": "^0.27.4",
-    "vue": "^3.3.4"
+    "@nuxt/fonts": "0.11.4",
+    "@nuxt/icon": "1.13.0",
+    "@tauri-apps/api": "^2",
+    "@tauri-apps/cli": "^2",
+    "@tauri-apps/plugin-opener": "^2",
+    "@types/bun": "^1.2.16",
+    "@unocss/nuxt": "^66.2.0",
+    "@unocss/reset": "^66.2.0",
+    "better-sqlite3": "^11.10.0",
+    "nuxt": "^3.17.5",
+    "reka-ui": "^2.3.1",
+    "vue": "^3.5.16",
+    "vue-router": "^4.5.1"
   },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^5.0.5",
-    "typescript": "^5.2.2",
-    "vite": "^5.3.1",
-    "vue-tsc": "^2.0.22",
-    "@tauri-apps/cli": ">=2.0.0-rc.0"
-  }
+  "trustedDependencies": [
+    "@parcel/watcher"
+  ]
 }

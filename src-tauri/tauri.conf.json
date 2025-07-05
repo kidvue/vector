@@ -1,7 +1,8 @@
 {
+  "$schema": "https://schema.tauri.app/config/2",
   "productName": "vector",
   "version": "0.1.0",
-  "identifier": "com.kidvue.vector",
+  "identifier": "co.kidvue.vector",
   "build": {
     "beforeDevCommand": "bun run dev",
     "devUrl": "http://localhost:1420",
